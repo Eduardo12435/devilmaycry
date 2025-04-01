@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dante & Vergil - Devil May Cry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dante & Vergil - Devil May Cry</h1>
+        <p class="intro">
+            Bienvenido a la página dedicada a los hermanos más legendarios de Devil May Cry. Aquí exploramos su historia, rivalidad y legado.
+        </p>
+
+        <div class="imagenes">
+            <!-- Dante -->
+            <div class="personaje">
+                <img src="dante.png" alt="Dante" class="dante animate" onclick="mostrarInfo('dante'); reproducirSonido()">
+                <br>
+                <button onclick="toggleMusica('musicaDante', this)">▶️ Evanescence - Justo Ahora</button>
+                <audio id="musicaDante" loop>
+                    <source src="evanescence-justo-ahora.mp3" type="audio/mp3">
+                </audio>
+            </div>
+
+            <!-- Vergil -->
+            <div class="personaje">
+                <img src="vergil.png" alt="Vergil" class="vergil animate" onclick="mostrarInfo('vergil'); reproducirSonido()">
+                <br>
+                <button onclick="toggleMusica('musicaVergil', this)">▶️ Bury The Light</button>
+                <audio id="musicaVergil" loop>
+                    <source src="bury-the-light.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+
+        <div class="historia">
+            <h2>La Historia de Dante y Vergil</h2>
+            <p>
+                Dante y Vergil, hijos del legendario demonio Sparda y la humana Eva, crecieron juntos hasta que su hogar fue atacado por demonios.
+                Dante pensó que su hermano estaba muerto, pero Vergil sobrevivió y decidió seguir el camino de su padre, buscando poder a toda costa.
+                A lo largo de los años, ambos se enfrentaron en batallas épicas, representando la lucha entre el libre albedrío y el destino demoníaco.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal de información -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarInfo()">&times;</span>
+            <h2 id="tituloModal"></h2>
+            <p id="textoModal"></p>
+        </div>
+    </div>
+
+    <!-- Sonido de disparo -->
+    <audio id="disparoSonido">
+        <source src="gunshot.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
